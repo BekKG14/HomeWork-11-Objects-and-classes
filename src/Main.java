@@ -8,4 +8,3 @@ public class Main {
         System.out.println(yourBook.getYear() + " " + yourBook.getAuthor() + " " + yourBook.getName());
         }
     }
-}
