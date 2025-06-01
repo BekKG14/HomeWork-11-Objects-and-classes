@@ -1,21 +1,23 @@
+import javax.xml.namespace.QName;
 public class book {
-    private String Author;
+    private Author author;
     private int year;
     private String name;
-    public book(String Author, int year, String name){
-        this.Author = Author ;
+    public book(Author author, int year, String name){
+        this.author = author ;
         this.year = year;
         this.name = name;
     }
-    public void publishedYear(){
-        this.year = year;
-    }
-    public String getAuthor() {
-        return Author;
+
+    public Author getAuthor() {
+        return author;
     }
 
-    public int getYear() {
+    public  int getYear(){
         return year;
+    }
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public String getName() {
