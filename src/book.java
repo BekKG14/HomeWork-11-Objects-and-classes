@@ -23,4 +23,18 @@ public class book {
     public String getName() {
         return name;
     }
+
+    public String toString() {
+        return "Название: " + name + " , автор: " + author + ", год публикации " + year;
+    }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        book myBook  = (book) other;
+        return name.equals(myBook.name);}
+    public int hashCode() {
+        return java.util.Objects.hash(name);
+    }
 }
