@@ -1,9 +1,9 @@
 import javax.xml.namespace.QName;
-public class book {
+public class Book {
     private Author author;
     private int year;
     private String name;
-    public book(Author author, int year, String name){
+    public Book(Author author, int year, String name){
         this.author = author ;
         this.year = year;
         this.name = name;
@@ -29,11 +29,12 @@ public class book {
     }
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null || this.getClass() != other.getClass()) {
             return false;
         }
-        book myBook  = (book) other;
-        return name.equals(myBook.name);}
+        Book myBook  = (Book) other;
+        return name.equals(myBook.name) && year == (myBook.year) && author.equals(myBook.author);
+    }
     public int hashCode() {
         return java.util.Objects.hash(name);
     }
